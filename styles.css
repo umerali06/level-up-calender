@@ -215,57 +215,186 @@ main{width:100%;max-width:100%;overflow:visible}
 }
 
 /* Additional responsive fixes */
-@media (max-width:1024px){
-  .pack-outer{min-height:clamp(190px,24vw,260px)}
-  .curvy-pack{min-height:clamp(130px,17vw,170px)}
-  .curvy-pack .q{font-size:clamp(17px,2.9vw,24px);max-width:88%}
-  .label text{font-size:clamp(12px,2.1vw,16px)}
-  /* Scale down arrows and labels slightly */
-  .arrow{width:clamp(65px,8.5vw,88px)!important}
-  .label{width:clamp(240px,38vw,360px)!important}
-  .label.lb,.label.rb{width:clamp(260px,40vw,380px)!important}
+
+/* === DESKTOP SCREENS (>1024px) — default optimal layout === */
+@media (min-width:1025px){
+  
+  /* spacious container for desktop */
+  .pack-outer{ min-height:220px !important; padding:80px 24px !important; }
+  .curvy-pack{ min-height:200px !important; }
+
+  /* arrow size + proximity - larger for desktop */
+  .arrow.rt,.arrow.rb,.arrow.lt,.arrow.lb{ width:72px !important; }
+  .arrow.lt,.arrow.rt{ top:-8px !important; }
+  .arrow.lb,.arrow.rb{ bottom:-8px !important; }
+  .arrow.lt,.arrow.lb{ left:48px !important; }
+  .arrow.rt,.arrow.rb{ right:38px !important; }
+  .arrow.lt{width: 78px !important; left: 42px !important; top: 45px !important;}
+  .arrow.rt{width: 68px !important; right: 48px !important; top: 26px !important;}
+  .arrow.lb{width: 72px !important; left: 48px !important; bottom: 48px !important;}
+  .arrow.rb{width: 62px !important; right: 58px !important; bottom: 24px !important;}
+
+  /* ===== Curved labels (kept UPRIGHT) ===== */
+  .label{ width:280px !important; pointer-events:none; }
+  .label text{ font-size:18px !important; letter-spacing:.8px !important; }
+
+  /* Top-Left */
+  .label.lt{
+    left:-58px !important;
+    top:-52px !important;
+    transform:rotate(-38deg) !important;
+  }
+
+  /* Top-Right */
+  .label.rt{
+    right:-54px !important;
+    top:-48px !important;
+    transform:rotate(24deg) !important;
+  }
+
+  /* Bottom-Left — **no scaleY(-1)** */
+  .label.lb{
+    left:-145px !important;
+    bottom:-52px !important;
+    transform:rotate(8deg) !important;
+  }
+
+  /* Bottom-Right — **no scaleY(-1)** */
+  .label.rb{
+    right:-165px !important;
+    bottom:-38px !important;
+    transform:rotate(-14deg) !important;
+  }
+
+  /* headline - optimal desktop size */
+  .curvy-pack .q{
+    max-width:85% !important;
+    font-size:clamp(19px,2.5vw,26px) !important;
+    line-height:1.45 !important;
+    padding:0 clamp(18px,3vw,25px) !important;
+  }
 }
 
+/* === TABLET SCREENS (≤1024px) — arrows + labels positioned accurately === */
+@media (max-width:1024px){
+
+  /* container with better spacing */
+  .pack-outer{ min-height:190px !important; padding:68px 18px !important; }
+  .curvy-pack{ min-height:175px !important; }
+
+  /* arrow size + proximity */
+  .arrow.rt,.arrow.rb,.arrow.lt,.arrow.lb{ width:62px !important; }
+  .arrow.lt,.arrow.rt{ top:-4px !important; }
+  .arrow.lb,.arrow.rb{ bottom:-4px !important; }
+  .arrow.lt,.arrow.lb{ left:42px !important; }
+  .arrow.rt,.arrow.rb{ right:32px !important; }
+  .arrow.lt{top: 32px !important;}
+  .arrow.lb{bottom: 32px !important;}
+  .arrow.rb{width: 52px !important; right: 48px !important; bottom: 18px !important;}
+  .arrow.rt{width: 58px !important; right: 42px !important; top: 24px !important;}
+  .arrow.lt{width: 66px !important; left: 36px !important; top: 38px !important;}
+
+  /* ===== Curved labels (kept UPRIGHT) ===== */
+  .label{ width:240px !important; pointer-events:none; }
+  .label text{ font-size:16px !important; letter-spacing:.7px !important; }
+
+  /* Top-Left */
+  .label.lt{
+    left:-48px !important;
+    top:-46px !important;
+    transform:rotate(-38deg) !important;
+  }
+
+  /* Top-Right */
+  .label.rt{
+    right:-46px !important;
+    top:-42px !important;
+    transform:rotate(24deg) !important;
+  }
+
+  /* Bottom-Left — **no scaleY(-1)** */
+  .label.lb{
+    left:-125px !important;
+    bottom:-48px !important;
+    transform:rotate(12deg) !important;
+  }
+
+  /* Bottom-Right — **no scaleY(-1)** */
+  .label.rb{
+    right:-145px !important;
+    bottom:-34px !important;
+    transform:rotate(-14deg) !important;
+  }
+
+  /* headline - fully responsive */
+  .curvy-pack .q{
+    max-width:88% !important;
+    font-size:clamp(17px,2.9vw,24px) !important;
+    line-height:1.45 !important;
+    padding:0 clamp(15px,2.8vw,22px) !important;
+  }
+}
+
+/* === SMALL TABLET SCREENS (≤768px) — arrows + labels positioned accurately === */
 @media (max-width:768px){
   .lucrar-level-up-company{padding:20px 10px 32px}
   .bar-title,.liq-wrap,.title-wrap{max-width:95vw}
-  .contact-cluster{max-width:95vw;overflow:hidden}
-  .pack-outer{min-height:clamp(180px,24vw,230px);padding:clamp(80px,14vw,100px) clamp(15px,3vw,20px)}
-  .curvy-pack{min-height:clamp(130px,18vw,160px)}
-  .curvy-pack .q{font-size:clamp(16px,3.2vw,22px);line-height:1.5;max-width:90%;padding:0 clamp(12px,2.5vw,20px)}
-  
-  /* Arrows - keep visible but smaller and closer to center */
-  .arrow{
-    width:clamp(50px,7vw,65px)!important;
-  }
-  .arrow.lt,.arrow.lb{left:clamp(12px,4%,20px)!important}
-  .arrow.rt,.arrow.rb{right:clamp(12px,4%,20px)!important}
-  .arrow.lt,.arrow.rt{top:clamp(-35px,-22%,-45px)!important}
-  .arrow.lb,.arrow.rb{bottom:clamp(-35px,-22%,-45px)!important}
-  
-  /* Labels - smaller and repositioned to fit screen */
-  .label{
-    width:clamp(180px,30vw,260px)!important;
-  }
-  .label text{font-size:clamp(10px,2vw,13px)}
-  
+  .contact-cluster{max-width:95vw}
+
+  /* container with better spacing */
+  .pack-outer{ min-height:165px !important; padding:58px 14px !important; }
+  .curvy-pack{ min-height:155px !important; }
+
+  /* arrow size + proximity */
+  .arrow.rt,.arrow.rb,.arrow.lt,.arrow.lb{ width:54px !important; }
+  .arrow.lt,.arrow.rt{ top:-3px !important; }
+  .arrow.lb,.arrow.rb{ bottom:-3px !important; }
+  .arrow.lt,.arrow.lb{ left:36px !important; }
+  .arrow.rt,.arrow.rb{ right:26px !important; }
+  .arrow.lt{top: 26px !important;}
+  .arrow.lb{bottom: 18px !important;}
+  .arrow.rb{width: 44px !important; right: 42px !important; bottom: 8px !important;}
+  .arrow.rt{width: 50px !important; right: 36px !important; top: 18px !important;}
+  .arrow.lt{width: 58px !important; left: 30px !important; top: 32px !important;}
+
+  /* ===== Curved labels (kept UPRIGHT) ===== */
+  .label{ width:205px !important; pointer-events:none; }
+  .label text{ font-size:15px !important; letter-spacing:.6px !important; }
+
+  /* Top-Left */
   .label.lt{
-    left:clamp(-60px,-20%,-75px)!important;
-    top:clamp(-110px,-70%,-130px)!important;
+    left:-42px !important;
+    top:-38px !important;
+    transform:rotate(-38deg) !important;
   }
-  .label.lb{
-    left:clamp(-105px,-20%,-75px)!important;
-    bottom:clamp(-110px,-70%,-130px)!important;
-    width:clamp(200px,32vw,280px)!important;
-  }
+
+  /* Top-Right */
   .label.rt{
-    right:clamp(-60px,-20%,-75px)!important;
-    top:clamp(-110px,-70%,-130px)!important;
+    right:-38px !important;
+    top:-35px !important;
+    transform:rotate(24deg) !important;
   }
+
+  /* Bottom-Left — **no scaleY(-1)** */
+  .label.lb{
+    left:-108px !important;
+    bottom:-48px !important;
+    transform:rotate(18deg) !important;
+  }
+
+  /* Bottom-Right — **no scaleY(-1)** */
   .label.rb{
-    right:clamp(-105px,-20%,-75px)!important;
-    bottom:clamp(-110px,-70%,-130px)!important;
-    width:clamp(200px,32vw,280px)!important;
+    right:-128px !important;
+    bottom:-34px !important;
+    transform:rotate(-14deg) !important;
+  }
+
+  /* headline - fully responsive */
+  .curvy-pack .q{
+    max-width:90% !important;
+    font-size:clamp(16px,3.2vw,22px) !important;
+    line-height:1.5 !important;
+    padding:0 clamp(12px,2.5vw,20px) !important;
   }
   
   .stats-frame{max-width:95vw;padding:16px 12px}
@@ -293,115 +422,90 @@ main{width:100%;max-width:100%;overflow:visible}
   .bg-logo{transform:translate(0,250px) rotate(-45deg);width:min(80%,500px)}
 }
 
+/* === SMALL SCREENS (≤600px) — arrows + labels positioned accurately === */
 @media (max-width:600px){
-  .pack-outer{min-height:clamp(150px,20vw,180px);padding:clamp(60px,11vw,75px) clamp(10px,2.5vw,15px)}
-  .curvy-pack{min-height:clamp(100px,14vw,130px)}
-  .curvy-pack .q{font-size:clamp(15px,3.8vw,20px);padding:0 clamp(10px,2vw,15px)}
+
+  /* compact container for 600px screens */
+  .pack-outer{ min-height:150px !important; padding:52px 12px !important; }
+  .curvy-pack{ min-height:145px !important; }
+
+  /* arrow size + proximity - slightly larger than 480px */
+  .arrow.rt,.arrow.rb,.arrow.lt,.arrow.lb{ width:48px !important; }
+  .arrow.lt,.arrow.rt{ top:-2px !important; }
+  .arrow.lb,.arrow.rb{ bottom:-2px !important; }
+  .arrow.lt,.arrow.lb{ left:32px !important; }
+  .arrow.rt,.arrow.rb{ right:22px !important; }
+  .arrow.lt{top: 22px !important;}
+  .arrow.lb{bottom: 28px !important}
+  .arrow.rb{width: 38px !important; right: 38px !important; bottom: 18px !important;}
+  .arrow.rt{width: 46px !important; right: 32px !important; top: 16px !important;}
+  .arrow.lt{width: 52px !important; left: 26px !important; top: 28px !important;}
   
-  /* Arrows - even smaller and closer */
-  .arrow{
-    width:clamp(40px,6vw,55px)!important;
-  }
-  .arrow.lt,.arrow.lb{left:clamp(8px,3%,15px)!important}
-  .arrow.rt,.arrow.rb{right:clamp(8px,3%,15px)!important}
-  .arrow.lt,.arrow.rt{top:clamp(-30px,-20%,-38px)!important}
-  .arrow.lb,.arrow.rb{bottom:clamp(-30px,-20%,-38px)!important}
-  
-  /* Labels - compact and close to center */
-  .label{
-    width:clamp(150px,26vw,220px)!important;
-  }
-  .label text{font-size:clamp(9px,1.8vw,12px)}
-  
+
+  /* ===== Curved labels (kept UPRIGHT) ===== */
+  .label{ width:185px !important; pointer-events:none; }
+  .label text{ font-size:14px !important; letter-spacing:.6px !important; }
+
+  /* Top-Left: steeper, closer */
   .label.lt{
-    left:clamp(-45px,-16%,-60px)!important;
-    top:clamp(-90px,-60%,-110px)!important;
+    left:-35px !important;
+    top:-32px !important;
+    transform:rotate(-38deg) !important;
   }
-  .label.lb{
-    left:clamp(-105px,-16%,-60px)!important;
-    bottom:clamp(-90px,-60%,-110px)!important;
-    width:clamp(170px,28vw,240px)!important;
-  }
+
+  /* Top-Right: almost horizontal above arrow */
   .label.rt{
-    right:clamp(-45px,-16%,-60px)!important;
-    top:clamp(-90px,-60%,-110px)!important;
+    right:-32px !important;
+    top:-30px !important;
+    transform:rotate(24deg) !important;
   }
+
+  /* Bottom-Left: horizontal-ish, CLOSE to arrow — **no scaleY(-1)** */
+  .label.lb{
+    left:-105px !important;
+    bottom:-34px !important;
+    transform:rotate(18deg) !important;
+  }
+
+  /* Bottom-Right: slight tilt toward arrow — **no scaleY(-1)** */
   .label.rb{
-    right:clamp(-105px,-16%,-60px)!important;
-    bottom:clamp(-90px,-60%,-110px)!important;
-    width:clamp(170px,28vw,240px)!important;
+    right:-115px !important;
+    bottom:-24px !important;
+    transform:rotate(-14deg) !important;
+  }
+
+  /* headline readability */
+  .curvy-pack .q{
+    max-width:95% !important;
+    font-size:clamp(15px,3.8vw,20px) !important;
+    line-height:1.5 !important;
+    padding:0 clamp(10px,2vw,15px) !important;
   }
   
   /* Stats section - single column on small screens */
   .stats-frame{
-    padding:clamp(14px,3vw,18px) clamp(10px,2vw,14px);
+    padding:clamp(14px,3vw,18px) clamp(10px,2vw,14px) !important;
   }
-  .improve-big{font-size:clamp(22px,5.5vw,28px)}
-  .stats-title{font-size:clamp(14px,3.2vw,17px);margin-bottom:20px}
+  .improve-big{font-size:clamp(22px,5.5vw,28px) !important}
+  .stats-title{font-size:clamp(14px,3.2vw,17px) !important;margin-bottom:20px !important}
   
   .icons{
-    grid-template-columns:1fr;
-    row-gap:clamp(16px,3vw,20px);
-    column-gap:0;
-    padding:0 clamp(8px,2vw,12px);
+    grid-template-columns:1fr !important;
+    row-gap:clamp(16px,3vw,20px) !important;
+    column-gap:0 !important;
+    padding:0 clamp(8px,2vw,12px) !important;
   }
   .item{
-    column-gap:clamp(12px,2.5vw,16px);
-    padding:clamp(10px,2vw,14px);
-    background:rgba(239,215,160,0.03);
-    border-radius:8px;
+    column-gap:clamp(12px,2.5vw,16px) !important;
+    padding:clamp(10px,2vw,14px) !important;
+    background:rgba(239,215,160,0.03) !important;
+    border-radius:8px !important;
   }
   .item .icon{
-    width:clamp(55px,11vw,68px);
-    height:clamp(55px,11vw,68px);
+    width:clamp(55px,11vw,68px) !important;
+    height:clamp(55px,11vw,68px) !important;
   }
-  .lbl{font-size:clamp(11px,2.3vw,13px)}
-  .num{font-size:clamp(20px,4.2vw,24px)}
+  .lbl{font-size:clamp(11px,2.3vw,13px) !important}
+  .num{font-size:clamp(20px,4.2vw,24px) !important}
 }
 
-@media (max-width:480px){
-  .lucrar-level-up-company{padding:15px 0 25px}
-  .bar-title,.liq-wrap,.title-wrap,.contact-cluster,.stats-frame{max-width:96vw}
-  .contact-cluster{margin:15px auto 0}
-  .pack-outer{min-height:clamp(130px,18vw,160px);padding:clamp(50px,10vw,65px) 10px}
-  .curvy-pack{min-height:clamp(90px,13vw,120px)}
-  .curvy-pack .q{font-size:clamp(15px,4.2vw,19px);line-height:1.6;padding:0 clamp(10px,2vw,15px);max-width:95%}
-  /* Completely hide arrows and labels on very small screens */
-  .arrow,.label{display:none}
-  .contact-curve{max-width:95vw;margin-top:20px}
-  
-  /* Stats - cleaner single column layout */
-  .stats-frame{padding:clamp(12px,2.5vw,16px) clamp(8px,1.5vw,12px)}
-  .improve-top{font-size:clamp(13px,3vw,15px);margin-bottom:4px}
-  .improve-big{font-size:clamp(20px,5vw,26px);margin-bottom:10px}
-  .stats-title{font-size:clamp(13px,3vw,16px);margin-bottom:16px}
-  
-  .icons{
-    grid-template-columns:1fr;
-    row-gap:clamp(12px,2.5vw,16px);
-    column-gap:0;
-    padding:0 clamp(6px,1.5vw,10px);
-  }
-  .item{
-    column-gap:clamp(10px,2.2vw,14px);
-    padding:clamp(8px,1.8vw,12px);
-    background:rgba(239,215,160,0.04);
-    border-radius:6px;
-  }
-  .item .icon{
-    width:clamp(50px,10vw,60px);
-    height:clamp(50px,10vw,60px);
-  }
-  .lbl{font-size:clamp(10px,2.2vw,12px);letter-spacing:0.3px}
-  .num{font-size:clamp(18px,4vw,22px)}
-  
-  .liq-row{flex-direction:column;gap:6px}
-  .bg-logo{display:none}
-}
-
-@media (max-width:360px){
-  .pack-outer{min-height:clamp(110px,16vw,140px);padding:clamp(45px,9vw,55px) 8px}
-  .curvy-pack{min-height:clamp(80px,12vw,100px)}
-  .curvy-pack .q{font-size:clamp(14px,4.5vw,17px);padding:0 8px}
-  .contact-curve{margin-top:15px}
-}
