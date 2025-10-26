@@ -378,8 +378,8 @@ main{width:100%;max-width:100%;overflow:visible}
   /* Bottom-Left — **no scaleY(-1)** */
   .label.lb{
     left:-108px !important;
-    bottom:-48px !important;
-    transform:rotate(18deg) !important;
+    bottom:-40px !important;
+    transform:rotate(10deg) !important;
   }
 
   /* Bottom-Right — **no scaleY(-1)** */
@@ -462,15 +462,15 @@ main{width:100%;max-width:100%;overflow:visible}
 
   /* Bottom-Left: horizontal-ish, CLOSE to arrow — **no scaleY(-1)** */
   .label.lb{
-    left:-105px !important;
-    bottom:-34px !important;
-    transform:rotate(18deg) !important;
+    left:-95px !important;
+    bottom:-28px !important;
+    transform:rotate(10deg) !important;
   }
 
   /* Bottom-Right: slight tilt toward arrow — **no scaleY(-1)** */
   .label.rb{
-    right:-115px !important;
-    bottom:-24px !important;
+    right:-105px !important;
+    bottom:-16px !important;
     transform:rotate(-14deg) !important;
   }
 
