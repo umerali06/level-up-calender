@@ -84,7 +84,7 @@ main{width:100%;max-width:100%;overflow:visible}
   left:50%;
   top:12px;                 /* horizontal centering only */
   transform:translateX(-50%);
-  width:calc(var(--pack-w) - 160px);
+  width:calc(var(--pack-w) - 120px);
   text-align:center;
   color:#fff;
   font-size:clamp(18px,2.6vw,28px);
@@ -96,20 +96,20 @@ main{width:100%;max-width:100%;overflow:visible}
 .arrow{position:absolute;pointer-events:none;transform-origin:center center}
 .arrow img{width:100%;display:block}
 
-.arrow.lt{left:20%;top:-8%;width:84px;transform:rotate(210deg)}
-.arrow.lb{left:20%;top:22%;width:84px;transform:rotate(-50deg)}
-.arrow.rt{right:18%;top:20%;width:72px;transform:rotate(-110deg)}
-.arrow.rb{right:20%;top:-22%;width:54px;transform:rotate(30deg) scaleY(-1)}
+.arrow.lt{left:22%;top:-8%;width:84px;transform:rotate(210deg)}
+.arrow.lb{left:22%;top:22%;width:84px;transform:rotate(-50deg)}
+.arrow.rt{right:23%;top:20%;width:72px;transform:rotate(-110deg)}
+.arrow.rb{right:24%;top:-22%;width:54px;transform:rotate(30deg) scaleY(-1)}
 
 /* Labels - curved text positioned where arrows point */
 .label{position:absolute;pointer-events:none;transform-origin:center center}
 .label svg{display:block;width:100%;height:90px;overflow:visible}
 .label text{font-family:"SegoePrint",cursive!important;fill:var(--accent);font-size:18px}
 
-.label.lt{left:-6%;top:-21%;width:300px;transform:rotate(-3deg)}
-.label.lb{left:-12%;top:34%;width:340px;transform:rotate(-25deg)}
-.label.rt{left:67%;top:-24%;width:340px;transform:rotate(-16deg)}
-.label.rb{left:78%;top:35%;width:340px;transform:rotate(16deg)}
+.label.lt{left:-2%;top:-21%;width:300px;transform:rotate(-3deg)}
+.label.lb{left:-10%;top:34%;width:340px;transform:rotate(-25deg)}
+.label.rt{left:62%;top:-24%;width:340px;transform:rotate(-16deg)}
+.label.rb{left:73%;top:35%;width:340px;transform:rotate(16deg)}
 .contact-curve{display:block;margin:clamp(20px,3.5vw,24px) auto 0;max-width:min(620px,90vw);width:100%;position:relative;z-index:5}
 .contact-curve text{font-family:"SegoePrint",cursive!important;fill:var(--accent);font-size:clamp(16px,3.5vw,22px);text-anchor:middle}
 .contact-curve a{fill:var(--accent);color:var(--accent);text-decoration:none;pointer-events:auto;cursor:pointer}
@@ -172,7 +172,7 @@ main{width:100%;max-width:100%;overflow:visible}
 @keyframes stPulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.08)}}
 .st-modal[aria-hidden="false"] .st-close{animation:stPulse 2.8s ease-in-out infinite}
 .st-dialog--calendly .st-body{ min-height:0 !important; }
-
+ .curvy-pack .q{ max-width:55ch; width: 100% !important;}
 /* Responsive tweaks */
 @media (min-width:641px) and (max-width:1024px){
   .st-dialog{ width:86vw; height:min(86vh, 800px); }
@@ -180,12 +180,6 @@ main{width:100%;max-width:100%;overflow:visible}
 @media (max-width:640px){
   .st-dialog{ width:92vw; height:min(88vh, 720px); border-radius:14px; }
   .st-close{ width:52px; height:52px; font-size:24px; right:10px; top:10px; }
-}
-
-/* Additional responsive fixes */
-
-/* === DESKTOP SCREENS (>1024px) — default optimal layout === */
-@media (min-width:1025px){
   
   /* spacious container for desktop */
   .pack-outer{ min-height:220px !important; padding:80px 24px !important; }
@@ -227,8 +221,8 @@ main{width:100%;max-width:100%;overflow:visible}
   
   .arrow.lt{left:22%;top:-8%;width:84px;transform:rotate(210deg)}
   .arrow.lb{left:22%;top:22%;width:84px;transform:rotate(-50deg)}
-  .arrow.rt{right:22%;top:20%;width:72px;transform:rotate(-110deg)}
-  .arrow.rb{right:22%;top:-22%;width:54px;transform:rotate(30deg) scaleY(-1)}
+  .arrow.rt{right: 23%;top:20%;width:72px;transform:rotate(-110deg)}
+  .arrow.rb{right:23%;top:-22%;width:54px;transform:rotate(30deg) scaleY(-1)}
   
   .label{height:90px}
   .label text{font-size:17px}
@@ -261,7 +255,7 @@ main{width:100%;max-width:100%;overflow:visible}
   .curvy-pack{transform:scale(0.87)}
   
   .label text{font-size:16px}
-  .curvy-pack .q{font-size:25px;width:calc(var(--pack-w) - 180px)}
+  .curvy-pack .q{font-size:25px;width:calc(var(--pack-w) - 160px)}
   
   .contact-curve text{font-size:clamp(14px,3.1vw,19px)}
   .improve-big{font-size:clamp(26px,4.8vw,30px)}
@@ -285,7 +279,7 @@ main{width:100%;max-width:100%;overflow:visible}
   .curvy-pack{transform:scale(0.85)}
   
   .label text{font-size:15px}
-  .curvy-pack .q{font-size:24px;width:calc(var(--pack-w) - 190px)}
+  .curvy-pack .q{font-size:24px;width:calc(var(--pack-w) - 160px)}
   
   .contact-curve text{font-size:clamp(14px,3vw,18px)}
   .improve-top{font-size:14px}
@@ -311,7 +305,7 @@ main{width:100%;max-width:100%;overflow:visible}
   .curvy-pack{transform:scale(0.83)}
   
   .label text{font-size:15px}
-  .curvy-pack .q{font-size:23px;width:calc(var(--pack-w) - 200px)}
+  .curvy-pack .q{font-size:23px;width:calc(var(--pack-w) - 160px)}
   
   .contact-curve text{font-size:clamp(14px,3vw,18px)}
   .improve-top{font-size:14px}
@@ -337,7 +331,7 @@ main{width:100%;max-width:100%;overflow:visible}
   .curvy-pack{transform:scale(0.81)}
   
   .label text{font-size:15px}
-  .curvy-pack .q{font-size:23px;width:calc(var(--pack-w) - 205px)}
+  .curvy-pack .q{font-size:23px;width:calc(var(--pack-w) - 180px)}
   
   .contact-curve text{font-size:clamp(13px,3vw,17px)}
   .improve-top{font-size:13px}
@@ -379,7 +373,7 @@ main{width:100%;max-width:100%;overflow:visible}
   .label.rt{left:64%;top:-24%;width:340px;transform:rotate(-16deg)}
   .label.rb{left:73%;top:35%;width:340px;transform:rotate(16deg)}
   
-  .curvy-pack .q{font-size:22px;width:calc(var(--pack-w) - 220px)}
+  .curvy-pack .q{font-size:22px;width:calc(var(--pack-w) - 180px)}
   
   .contact-curve{margin:clamp(12px,3.8vw,16px) auto 0}
   .contact-curve text{font-size:clamp(13px,3.2vw,17px)}
@@ -428,7 +422,7 @@ main{width:100%;max-width:100%;overflow:visible}
   .curvy-pack{transform:scale(0.75)}
   
   .label text{font-size:14px}
-  .curvy-pack .q{font-size:21px;width:calc(var(--pack-w) - 235px)}
+  .curvy-pack .q{font-size:21px;width:calc(var(--pack-w) - 200px)}
   
   .contact-curve text{font-size:clamp(13px,3.3vw,16px)}
   .improve-top{font-size:13px}
@@ -721,80 +715,84 @@ main{width:100%;max-width:100%;overflow:visible}
 
 /* Fine-tune headline size around 680–640px for better fit */
 @media (max-width:680px){
-  .curvy-pack .q{ font-size:19.5px; width:86%; }
+  .curvy-pack{  margin-left: -4%; display: block;}
+  .curvy-pack .q{ font-size:19.5px; width: 100%; max-width:50ch !important; }
   /* Pull labels slightly inward to avoid horizontal cutoff */
-  .label.lt{ left:3%; }
-  .label.lb{ left:-4%; }
-  .label.rt{ left:62%; }
-  .label.rb{ left:71%; }
+  .label.lt{ left:10%; }
+  .label.lb{ left:3%; }
+  .label.rt{ left:57%; }
+  .label.rb{ left:67%; }
   /* Nudge arrows in a touch */
-  .arrow.rt{ right:24%; }
-  .arrow.rb{ right:24%; }
+  .arrow.rt{ right:29%; }
+  .arrow.rb{ right:30%; }
+  .arrow.lt{ left:29%; }
+  .arrow.lb{ left:29%; }
 }
 @media (max-width:640px){
-  .curvy-pack{  margin-left: -8%; display: block;}
-  .curvy-pack .q{ font-size:17px; width:80%; text-align: center;}
-  .label.lt{ left:7%; rotate: calc(9deg); }
-  .label.lb{ left:-1%; rotate: calc(9deg); }
-  .label.rt{ left:59%; }
-  .label.rb{ left:68%; }
+ .curvy-pack{  margin-left: -4%; display: block;}
+  .curvy-pack .q{ font-size:19.5px; width: 100%; max-width:50ch !important; }
+  /* Pull labels slightly inward to avoid horizontal cutoff */
+  .label.lt{ left:10%; }
+  .label.lb{ left:3%; }
+  .label.rt{ left:57%; }
+  .label.rb{ left:67%; }
   /* Nudge arrows in a touch */
-  .arrow.rt{ right:28%; }
-  .arrow.rb{ right:28% ;}
-  .arrow.lt{ left:26%; }
-  .arrow.lb{ left:26% ;}
+  .arrow.rt{ right:29%; }
+  .arrow.rb{ right:30%; }
+  .arrow.lt{ left:29%; }
+  .arrow.lb{ left:29%; }
 }
 @media (max-width:600px){
-  .curvy-pack{  margin-left: -8%; display: block;}
+  .curvy-pack{  margin-left: -12%; display: block;}
   .curvy-pack .q{ font-size:17px; width:80%; text-align: center;}
-  .label.lt{ left: 9%; rotate: calc(9deg); }
-  .label.lb{ left:1%; rotate: calc(9deg); }
+  .label.lt{ left: 16%; rotate: calc(9deg); }
+  .label.lb{ left:9%; rotate: calc(9deg); }
   .label.rt{ left:60%; }
   .label.rb{ left:69%; }
   /* Nudge arrows in a touch */
   .arrow.rt{ right:28%; }
   .arrow.rb{ right:28% ;}
-  .arrow.lt{ left:26%; }
-  .arrow.lb{ left:26% ;}
+  .arrow.lt{ left:34%; }
+  .arrow.lb{ left:34% ;}
 }
 @media (max-width:520px){
-  .curvy-pack{  margin-left: -8%; display: block;}
+  .curvy-pack{  margin-left: -14%; display: block;}
   .curvy-pack .q{ font-size:17px; width:80%; text-align: center;}
-  .label.lt{ left: 11%; rotate: calc(9deg); }
-  .label.lb{ left:3%; rotate: calc(9deg); }
+  .label.lt{ left: 18%; rotate: calc(9deg); }
+  .label.lb{ left:11%; rotate: calc(9deg); }
   .label.rt{ left:60%; }
   .label.rb{ left:69%; }
   /* Nudge arrows in a touch */
   .arrow.rt{ right:28%; }
   .arrow.rb{ right:28% ;}
-  .arrow.lt{ left:26%; }
-  .arrow.lb{ left:26% ;}
+  .arrow.lt{ left:35%; }
+  .arrow.lb{ left:35% ;}
 }
 @media (max-width:480px){
-  .curvy-pack{  margin-left: -8%; display: block;}
+  .curvy-pack{  margin-left: -16%; display: block;}
   .curvy-pack .q{ font-size:17px; width:80%; text-align: center;}
-  .label.lt{ left: 12%; rotate: calc(9deg); }
-  .label.lb{ left:4%; rotate: calc(9deg); }
-  .label.rt{ left:61%; rotate: calc(9deg);}
-  .label.rb{ left:69%; rotate: calc(6deg); }
+  .label.lt{ left: 20%; rotate: calc(9deg); }
+  .label.lb{ left:13%; rotate: calc(9deg); }
+  .label.rt{ left:62%; }
+  .label.rb{ left: 71%; }
   /* Nudge arrows in a touch */
   .arrow.rt{ right:28%; }
   .arrow.rb{ right:28% ;}
-  .arrow.lt{ left:26%; }
-  .arrow.lb{ left:26% ;}
+  .arrow.lt{ left:35%; }
+  .arrow.lb{ left:35% ;}
 }
 @media (max-width:420px){
-  .curvy-pack{  margin-left: -14%; display: block;}
+  .curvy-pack{  margin-left: -20%; display: block;}
   .curvy-pack .q{ font-size:17px; width:80%; text-align: center;}
-  .label.lt{ left: 14%; rotate: calc(9deg); }
-  .label.lb{ left:7%; rotate: calc(9deg); }
-  .label.rt{ left:61.5%; rotate: calc(7deg);}
-  .label.rb{ left:69%; rotate: calc(6deg); }
+  .label.lt{ left: 22%; rotate: calc(9deg); }
+  .label.lb{ left:15%; rotate: calc(9deg); }
+  .label.rt{ left:62%; }
+  .label.rb{ left: 70%; rotate: calc(6deg); }
   /* Nudge arrows in a touch */
   .arrow.rt{ right:28%; }
   .arrow.rb{ right:28% ;}
-  .arrow.lt{ left:26%; }
-  .arrow.lb{ left:26% ;}
+  .arrow.lt{ left:35%; }
+  .arrow.lb{ left:35% ;}
 }
 
 /* ——— Larger screens: keep headline elegant, not oversized ——— */
@@ -811,7 +809,7 @@ main{width:100%;max-width:100%;overflow:visible}
 /* Force the central question into two balanced lines via character max-width */
 .curvy-pack .q{ max-width:28ch; text-wrap:balance; }
 @media (max-width:700px){
-  .curvy-pack .q{ max-width:26ch; }
+  .curvy-pack .q{ max-width:42ch; }
 }
 
 /* === EXTRA SMALL SCREENS (≤360px) === */
