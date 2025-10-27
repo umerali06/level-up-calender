@@ -96,10 +96,10 @@ main{width:100%;max-width:100%;overflow:visible}
 .arrow{position:absolute;pointer-events:none;transform-origin:center center}
 .arrow img{width:100%;display:block}
 
-.arrow.lt{left:22%;top:-8%;width:84px;transform:rotate(210deg)}
-.arrow.lb{left:22%;top:22%;width:84px;transform:rotate(-50deg)}
-.arrow.rt{right:23%;top:20%;width:72px;transform:rotate(-110deg)}
-.arrow.rb{right:24%;top:-22%;width:54px;transform:rotate(30deg) scaleY(-1)}
+.arrow.lt{left:22%;top:-4%;width:84px;transform:rotate(210deg)}
+.arrow.lb{left:22%;top:24%;width:84px;transform:rotate(-50deg)}
+.arrow.rt{right:23%;top:22%;width:72px;transform:rotate(-110deg)}
+.arrow.rb{right:24%;top:-20%;width:54px;transform:rotate(30deg) scaleY(-1)}
 
 /* Labels - curved text positioned where arrows point */
 .label{position:absolute;pointer-events:none;transform-origin:center center}
@@ -182,8 +182,8 @@ main{width:100%;max-width:100%;overflow:visible}
   .st-close{ width:52px; height:52px; font-size:24px; right:10px; top:10px; }
   
   /* spacious container for desktop */
-  .pack-outer{ min-height:220px !important; padding:80px 24px !important; }
-  .curvy-pack{ min-height:200px !important; }
+  .pack-outer{ max-height:220px !important; padding:50px 24px !important; }
+  .curvy-pack{ max-height:160px !important; }
 
   /* arrow size + proximity - larger for desktop */
  .arrow.lt{left:22%;top:-8%;width:84px;transform:rotate(210deg)}
@@ -699,7 +699,7 @@ main{width:100%;max-width:100%;overflow:visible}
   .arrow.rb{ width:30px; }
   .label.lt{ width:200px; }
   .label.lb,.label.rt,.label.rb{ width:240px; }
-  .label text{ font-size:11.5px; }
+  .label text{ font-size:13px; }
   .curvy-pack .q{ font-size:17px; }
 }
 
@@ -709,8 +709,8 @@ main{width:100%;max-width:100%;overflow:visible}
   .arrow.rb{ width:28px; }
   .label.lt{ width:190px; }
   .label.lb,.label.rt,.label.rb{ width:225px; }
-  .label text{ font-size:11px; }
-  .curvy-pack .q{ font-size:16px; }
+  .label text{ font-size:13px; }
+  .curvy-pack .q{ font-size:17px; }
 }
 
 /* Fine-tune headline size around 680–640px for better fit */
@@ -782,17 +782,17 @@ main{width:100%;max-width:100%;overflow:visible}
   .arrow.lb{ left:35% ;}
 }
 @media (max-width:420px){
-  .curvy-pack{  margin-left: -20%; display: block;}
+  .curvy-pack{  margin-left: -24%; display: block;}
   .curvy-pack .q{ font-size:17px; width:80%; text-align: center;}
   .label.lt{ left: 22%; rotate: calc(9deg); }
   .label.lb{ left:15%; rotate: calc(9deg); }
   .label.rt{ left:62%; }
   .label.rb{ left: 70%; rotate: calc(6deg); }
   /* Nudge arrows in a touch */
-  .arrow.rt{ right:28%; }
-  .arrow.rb{ right:28% ;}
-  .arrow.lt{ left:35%; }
-  .arrow.lb{ left:35% ;}
+  .arrow.rt{ right:28%; top: 24%;}
+  .arrow.rb{ right:28% ; top: -6%;}
+  .arrow.lt{ left:35%;top: 4%;}
+  .arrow.lb{ left:35% ; top: 26%;}
 }
 
 /* ——— Larger screens: keep headline elegant, not oversized ——— */
@@ -826,8 +826,20 @@ main{width:100%;max-width:100%;overflow:visible}
   .pack-outer{width:calc(var(--pack-w)*0.48);height:calc(var(--pack-h)*0.48)}
   .curvy-pack{width:var(--pack-w);height:var(--pack-h);transform:scale(0.48)}
   
-  .label text{font-size:12px}
+  .label text{font-size:14px}
   .curvy-pack .q{font-size:16px;width:74%}
+
+   .curvy-pack{  margin-left: -25.5%; display: block;}
+  .curvy-pack .q{ font-size:17px; width:80%; text-align: center;}
+  .label.lt{ left: 22%; rotate: calc(9deg); }
+  .label.lb{ left:15%; rotate: calc(9deg); }
+  .label.rt{ left:62%; }
+  .label.rb{ left: 70%; rotate: calc(6deg); }
+  /* Nudge arrows in a touch */
+  .arrow.rt{ right:29%; top: 24%;}
+  .arrow.rb{ right:29% ; top: -4%;}
+  .arrow.lt{ left:35%; top: 3%; }
+  .arrow.lb{ left:35% ; top: 24%;}
   
   .contact-curve text{font-size:clamp(10px,4.5vw,13px)}
   
