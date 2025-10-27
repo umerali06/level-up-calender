@@ -782,11 +782,11 @@ main{width:100%;max-width:100%;overflow:visible}
   .arrow.lb{ left:35% ;}
 }
 @media (max-width:420px){
-  .curvy-pack{  margin-left: -24%; display: block;}
+  .curvy-pack{  margin-left: -20%; display: block;}
   .curvy-pack .q{ font-size:17px; width:80%; text-align: center;}
-  .label.lt{ left: 22%; rotate: calc(9deg); }
+  .label.lt{ left: 22%; top: -8%; rotate: calc(9deg); font-size: 14px !important;}
   .label.lb{ left:15%; rotate: calc(9deg); }
-  .label.rt{ left:62%; }
+  .label.rt{ left:62%; top: -8%;}
   .label.rb{ left: 70%; rotate: calc(6deg); }
   /* Nudge arrows in a touch */
   .arrow.rt{ right:28%; top: 24%;}
