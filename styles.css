@@ -172,7 +172,7 @@ main{width:100%;max-width:100%;overflow:visible}
 @keyframes stPulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.08)}}
 .st-modal[aria-hidden="false"] .st-close{animation:stPulse 2.8s ease-in-out infinite}
 .st-dialog--calendly .st-body{ min-height:0 !important; }
- .curvy-pack .q{ max-width:85ch; width: 100% !important;}
+ .curvy-pack .q{ max-width:55ch; width: 100% !important;}
 /* Responsive tweaks */
 @media (min-width:641px) and (max-width:1024px){
   .st-dialog{ width:86vw; height:min(86vh, 800px); }
