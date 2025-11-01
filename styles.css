@@ -836,6 +836,8 @@ main{width:100%;max-width:100%;overflow:visible}
   .arrow.rb{ right:29% ; top: -6%;}
   .arrow.lt{ left:35%;top: 4%;}
   .arrow.lb{ left:35% ; top: 26%;}
+
+  .curvy-pack .q{ max-width:35ch; width: 100% !important;}
 }
 
 /* ——— Larger screens: keep headline elegant, not oversized ——— */
