@@ -872,7 +872,8 @@ main{width:100%;max-width:100%;overflow:visible}
   .curvy-pack{width:var(--pack-w);height:var(--pack-h);transform:scale(0.48)}
   
   .label text{font-size:18px}
-  .curvy-pack .q{font-size:22px;width:74%}
+  /* .curvy-pack .q{font-size:22px;width:74%} */
+  .curvy-pack .q{ max-width:35ch !important; width: 100% !important;}
 
    .curvy-pack{  margin-left: -25.5%; display: block;}
   .curvy-pack .q{ font-size:22px; width:80%; text-align: center;}
